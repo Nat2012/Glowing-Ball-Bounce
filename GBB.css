@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+
+.ballcounter{
+    border: 3px solid #fff;
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    padding: 10px 20px;
+}
+
+.ballcounter p {
+    font-size: medium;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+
+.box{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 3px solid #fff;
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background: rgba(255, 255, 255, 0.2); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    animation-name: bounce;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce{
+    0%{
+        position: absolute;
+    }
+
+    25%{
+        top: -10px;
+    }
+
+    75%{
+        top: 440px;
+    }
+
+    100%{
+        position: absolute;
+    }
+}
+
